@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ColorChange : MonoBehaviour
 {
-    public Color colorObjetivo = new Color(0.6f, 0.7f, 1f);
+    public Color colorObjetivo = new Color(1f, 0.8235f, 0.349f);
     public float duracion = 0.5f;
 
     // llamar desde botones
