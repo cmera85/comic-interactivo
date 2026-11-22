@@ -1,8 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class StoryBranchManager : MonoBehaviour
 {
+    [Header("Identificador Único de Decisión")]
+    public string idDecision = "Decision_1";
+
     [Header("Viñeta de Decisiones Original")]
     public GameObject viñetaDecisionBase;
 
@@ -15,6 +19,7 @@ public class StoryBranchManager : MonoBehaviour
     public GameObject viñetaTarget1;
     public GameObject viñetaTarget2;
     public GameObject viñetaTarget3;
+    public float posicionYTarget = 1500f;
 
     [Header("Botones de Decisión Originales")]
     public Button buttonDecision1;
@@ -24,11 +29,10 @@ public class StoryBranchManager : MonoBehaviour
     [Header("Imagen de desenfoque")]
     public GameObject imagenDesenfoque;
 
-    public static int decisionMomento1 = 0;
+    public static Dictionary<string, int> decisionesGuardadas = new Dictionary<string, int>();
 
     void Start()
     {
-        // Ocultar las rutas al iniciar
         if (ruta1Container != null)
             ruta1Container.SetActive(false);
 
@@ -38,20 +42,22 @@ public class StoryBranchManager : MonoBehaviour
         if (ruta3Container != null)
             ruta3Container.SetActive(false);
 
-        // Crear copias de los botones en las viñetas Target
         CrearBotonesTarget();
 
-        // Asignar eventos a los botones originales
-        buttonDecision1.onClick.AddListener(() => TomarDecision(1));
-        buttonDecision2.onClick.AddListener(() => TomarDecision(2));
-        buttonDecision3.onClick.AddListener(() => TomarDecision(3));
+        if (buttonDecision1 != null)
+            buttonDecision1.onClick.AddListener(() => TomarDecision(1));
+
+        if (buttonDecision2 != null)
+            buttonDecision2.onClick.AddListener(() => TomarDecision(2));
+
+        if (buttonDecision3 != null)
+            buttonDecision3.onClick.AddListener(() => TomarDecision(3));
 
         CheckSavedDecisions();
     }
 
     private void CrearBotonesTarget()
     {
-        // Copiar botón 1
         if (buttonDecision1 != null && viñetaTarget1 != null)
         {
             Button nuevoBoton1 = Instantiate(
@@ -63,17 +69,15 @@ public class StoryBranchManager : MonoBehaviour
             nuevoBoton1.interactable = false;
 
             RectTransform rectTransform = nuevoBoton1.GetComponent<RectTransform>();
-
             if (rectTransform != null)
             {
                 rectTransform.anchoredPosition = new Vector2(
                     rectTransform.anchoredPosition.x,
-                    1500f
+                    posicionYTarget
                 );
             }
         }
 
-        // Copiar botón 2
         if (buttonDecision2 != null && viñetaTarget2 != null)
         {
             Button nuevoBoton2 = Instantiate(
@@ -85,17 +89,15 @@ public class StoryBranchManager : MonoBehaviour
             nuevoBoton2.interactable = false;
 
             RectTransform rectTransform = nuevoBoton2.GetComponent<RectTransform>();
-
             if (rectTransform != null)
             {
                 rectTransform.anchoredPosition = new Vector2(
                     rectTransform.anchoredPosition.x,
-                    1500f
+                    posicionYTarget
                 );
             }
         }
 
-        // Copiar botón 3
         if (buttonDecision3 != null && viñetaTarget3 != null)
         {
             Button nuevoBoton3 = Instantiate(
@@ -107,12 +109,11 @@ public class StoryBranchManager : MonoBehaviour
             nuevoBoton3.interactable = false;
 
             RectTransform rectTransform = nuevoBoton3.GetComponent<RectTransform>();
-
             if (rectTransform != null)
             {
                 rectTransform.anchoredPosition = new Vector2(
                     rectTransform.anchoredPosition.x,
-                    1500f
+                    posicionYTarget
                 );
             }
         }
@@ -120,74 +121,66 @@ public class StoryBranchManager : MonoBehaviour
 
     private void TomarDecision(int opcion)
     {
-        // Bloquear los botones originales
         LockDecisions();
 
-        // Guardar decisión
-        decisionMomento1 = opcion;
+        decisionesGuardadas[idDecision] = opcion;
 
-        // Apagar imagen de desenfoque
         if (imagenDesenfoque != null)
-        {
             imagenDesenfoque.SetActive(false);
-        }
 
-        // Ocultar la viñeta original de decisiones
         if (viñetaDecisionBase != null)
-        {
             viñetaDecisionBase.SetActive(false);
-        }
 
-        // Mostrar únicamente la consecuencia elegida
         if (opcion == 1 && ruta1Container != null)
-        {
             ruta1Container.SetActive(true);
-        }
         else if (opcion == 2 && ruta2Container != null)
-        {
             ruta2Container.SetActive(true);
-        }
         else if (opcion == 3 && ruta3Container != null)
-        {
             ruta3Container.SetActive(true);
-        }
     }
 
     private void LockDecisions()
     {
         if (buttonDecision1 != null)
+        {
             buttonDecision1.interactable = false;
+            buttonDecision1.gameObject.SetActive(false);
+        }
 
         if (buttonDecision2 != null)
+        {
             buttonDecision2.interactable = false;
+            buttonDecision2.gameObject.SetActive(false);
+        }
 
         if (buttonDecision3 != null)
+        {
             buttonDecision3.interactable = false;
+            buttonDecision3.gameObject.SetActive(false);
+        }
     }
 
     private void CheckSavedDecisions()
     {
-        if (decisionMomento1 != 0)
+        if (decisionesGuardadas.ContainsKey(idDecision))
         {
-            // Ocultar viñeta original
+            int opcionGuardada = decisionesGuardadas[idDecision];
+
             if (viñetaDecisionBase != null)
                 viñetaDecisionBase.SetActive(false);
 
-            // Apagar desenfoque
             if (imagenDesenfoque != null)
                 imagenDesenfoque.SetActive(false);
 
-            // Mostrar la ruta guardada
-            if (decisionMomento1 == 1 && ruta1Container != null)
+            if (opcionGuardada == 1 && ruta1Container != null)
                 ruta1Container.SetActive(true);
 
-            if (decisionMomento1 == 2 && ruta2Container != null)
+            if (opcionGuardada == 2 && ruta2Container != null)
                 ruta2Container.SetActive(true);
 
-            if (decisionMomento1 == 3 && ruta3Container != null)
+            if (opcionGuardada == 3 && ruta3Container != null)
                 ruta3Container.SetActive(true);
 
-            // Mantener botones bloqueados
             LockDecisions();
         }
     }
