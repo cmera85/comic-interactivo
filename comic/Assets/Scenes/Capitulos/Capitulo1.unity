@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 47566598}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 50573859}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1761,7 +1761,7 @@ GameObject:
   - component: {fileID: 92572336}
   m_Layer: 5
   m_Name: Dialogo (2)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2853,7 +2853,6 @@ GameObject:
   - component: {fileID: 136044443}
   - component: {fileID: 136044442}
   - component: {fileID: 136044445}
-  - component: {fileID: 136044444}
   m_Layer: 5
   m_Name: Decision4
   m_TagString: Untagged
@@ -2961,18 +2960,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &136044444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136044440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!114 &136044445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4428,7 +4415,6 @@ GameObject:
   - component: {fileID: 166738616}
   - component: {fileID: 166738615}
   - component: {fileID: 166738618}
-  - component: {fileID: 166738617}
   m_Layer: 5
   m_Name: Decision7
   m_TagString: Untagged
@@ -4503,18 +4489,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &166738617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166738613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!114 &166738618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6012,7 +5986,7 @@ GameObject:
   - component: {fileID: 235253975}
   m_Layer: 5
   m_Name: Dialogo
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6681,6 +6655,126 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261846067}
   m_CullTransparentMesh: 1
+--- !u!1 &261902214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 261902218}
+  - component: {fileID: 261902217}
+  - component: {fileID: 261902216}
+  - component: {fileID: 261902215}
+  m_Layer: 5
+  m_Name: ContrastebtnOFF (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &261902215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261902214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 261902216}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &261902216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261902214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.20188677, g: 1, b: 0.24570484, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -5603518501676358418, guid: 6d744a3696f59384f9607fa0f420af77, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &261902217
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261902214}
+  m_CullTransparentMesh: 1
+--- !u!224 &261902218
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261902214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.3243062, y: 3.3243062, z: 3.3243062}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 992178228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -140, y: -443}
+  m_SizeDelta: {x: 105.101, y: 26.669}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &274129123
 GameObject:
   m_ObjectHideFlags: 0
@@ -7015,7 +7109,7 @@ GameObject:
   - component: {fileID: 303952541}
   m_Layer: 5
   m_Name: Dialogo (1)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7332,7 +7426,6 @@ GameObject:
   - component: {fileID: 311617931}
   - component: {fileID: 311617930}
   - component: {fileID: 311617933}
-  - component: {fileID: 311617932}
   m_Layer: 5
   m_Name: FlujoDecision1
   m_TagString: Untagged
@@ -7421,18 +7514,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &311617932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311617928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!114 &311617933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7459,7 +7540,6 @@ GameObject:
   - component: {fileID: 312277002}
   - component: {fileID: 312277001}
   - component: {fileID: 312277004}
-  - component: {fileID: 312277003}
   m_Layer: 5
   m_Name: FlujoDecision2
   m_TagString: Untagged
@@ -7552,18 +7632,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &312277003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312276999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!114 &312277004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10766,6 +10834,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 483113748}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RecolectaHueso_1
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &459356074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11619,7 +11699,7 @@ GameObject:
   - component: {fileID: 494262018}
   m_Layer: 5
   m_Name: Dialogo
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11693,8 +11773,9 @@ GameObject:
   - component: {fileID: 496597515}
   - component: {fileID: 496597517}
   - component: {fileID: 496597516}
+  - component: {fileID: 496597518}
   m_Layer: 5
-  m_Name: Banner (6)
+  m_Name: ContrastebtnON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11757,6 +11838,110 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496597514}
   m_CullTransparentMesh: 1
+--- !u!114 &496597518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496597514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 496597516}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1465624478}
+        m_TargetAssemblyTypeName: AccesibilityManager, Assembly-CSharp
+        m_MethodName: ActivarAltoContraste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2010450187}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 261902214}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1640418915}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 496597514}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &503516175
 GameObject:
   m_ObjectHideFlags: 0
@@ -12882,7 +13067,7 @@ GameObject:
   - component: {fileID: 579522783}
   m_Layer: 5
   m_Name: Dialogo (1)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14024,7 +14209,6 @@ GameObject:
   - component: {fileID: 635680192}
   - component: {fileID: 635680191}
   - component: {fileID: 635680194}
-  - component: {fileID: 635680193}
   m_Layer: 5
   m_Name: Decision8
   m_TagString: Untagged
@@ -14108,18 +14292,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &635680193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635680189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!114 &635680194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14147,7 +14319,7 @@ GameObject:
   - component: {fileID: 637205035}
   m_Layer: 5
   m_Name: Dialogo (1)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14947,7 +15119,6 @@ GameObject:
   - component: {fileID: 684566876}
   - component: {fileID: 684566875}
   - component: {fileID: 684566878}
-  - component: {fileID: 684566877}
   m_Layer: 5
   m_Name: Decision5
   m_TagString: Untagged
@@ -15053,18 +15224,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &684566877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684566873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!114 &684566878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15455,7 +15614,7 @@ GameObject:
   - component: {fileID: 731360405}
   m_Layer: 5
   m_Name: Dialogo (2)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15663,7 +15822,7 @@ GameObject:
   - component: {fileID: 739083081}
   m_Layer: 5
   m_Name: Dialogo (4)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18150,7 +18309,7 @@ GameObject:
   - component: {fileID: 838298517}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18528,7 +18687,6 @@ GameObject:
   - component: {fileID: 842175715}
   - component: {fileID: 842175714}
   - component: {fileID: 842175716}
-  - component: {fileID: 842175717}
   m_Layer: 5
   m_Name: Flujo Principal
   m_TagString: Untagged
@@ -18623,18 +18781,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ColorChange
   colorObjetivo: {r: 1, g: 0.8235294, b: 0.34901962, a: 1}
   duracion: 0.5
---- !u!114 &842175717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842175712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!1 &843435181
 GameObject:
   m_ObjectHideFlags: 0
@@ -20278,7 +20424,7 @@ GameObject:
   - component: {fileID: 909667251}
   m_Layer: 5
   m_Name: Dialogo (1)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21353,7 +21499,7 @@ GameObject:
   - component: {fileID: 992178230}
   - component: {fileID: 992178229}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelAccesibilidad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21383,7 +21529,9 @@ RectTransform:
   - {fileID: 825173151}
   - {fileID: 1824612196}
   - {fileID: 2010450188}
+  - {fileID: 261902218}
   - {fileID: 496597515}
+  - {fileID: 1640418916}
   m_Father: {fileID: 597594938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -22047,7 +22195,7 @@ GameObject:
   - component: {fileID: 1025773144}
   m_Layer: 5
   m_Name: Dialogo
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23384,7 +23532,7 @@ GameObject:
   - component: {fileID: 1087227759}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24146,7 +24294,7 @@ GameObject:
   - component: {fileID: 1105531031}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25025,7 +25173,7 @@ GameObject:
   - component: {fileID: 1150677003}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26182,7 +26330,6 @@ GameObject:
   - component: {fileID: 1209570630}
   - component: {fileID: 1209570629}
   - component: {fileID: 1209570632}
-  - component: {fileID: 1209570631}
   m_Layer: 5
   m_Name: Decision6
   m_TagString: Untagged
@@ -26292,18 +26439,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1209570631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209570627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!114 &1209570632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27977,7 +28112,7 @@ GameObject:
   - component: {fileID: 1271153039}
   m_Layer: 5
   m_Name: Dialogo (1)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29854,7 +29989,7 @@ GameObject:
   - component: {fileID: 1344827053}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30593,7 +30728,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 842175717}
+      - m_Target: {fileID: 1465624478}
         m_TargetAssemblyTypeName: AccesibilityManager, Assembly-CSharp
         m_MethodName: Aumentar
         m_Mode: 1
@@ -32175,7 +32310,6 @@ GameObject:
   - component: {fileID: 1431803135}
   - component: {fileID: 1431803134}
   - component: {fileID: 1431803137}
-  - component: {fileID: 1431803136}
   m_Layer: 5
   m_Name: Decision9
   m_TagString: Untagged
@@ -32252,18 +32386,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1431803136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431803132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!114 &1431803137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32791,7 +32913,7 @@ GameObject:
   - component: {fileID: 1460686138}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33063,6 +33185,7 @@ GameObject:
   - component: {fileID: 1465624475}
   - component: {fileID: 1465624477}
   - component: {fileID: 1465624476}
+  - component: {fileID: 1465624478}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -33096,7 +33219,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -532, y: 959.99915}
+  m_AnchoredPosition: {x: -532, y: 968.67993}
   m_SizeDelta: {x: 1064, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1465624476
@@ -33139,6 +33262,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1465624478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465624474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!1 &1466573345
 GameObject:
   m_ObjectHideFlags: 0
@@ -33883,7 +34018,6 @@ GameObject:
   - component: {fileID: 1478806028}
   - component: {fileID: 1478806027}
   - component: {fileID: 1478806030}
-  - component: {fileID: 1478806029}
   m_Layer: 5
   m_Name: FlujoDecision3
   m_TagString: Untagged
@@ -33976,18 +34110,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1478806029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478806025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa225a14274434cb2ae93ef2cfb99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AccesibilityManager
 --- !u!114 &1478806030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34500,7 +34622,7 @@ GameObject:
   - component: {fileID: 1497291885}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35349,7 +35471,7 @@ GameObject:
   - component: {fileID: 1530112549}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35486,7 +35608,7 @@ GameObject:
   - component: {fileID: 1540428865}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36339,7 +36461,7 @@ GameObject:
   - component: {fileID: 1570872736}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36795,7 +36917,7 @@ GameObject:
   - component: {fileID: 1581376576}
   m_Layer: 5
   m_Name: Dialogo (5)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37250,7 +37372,7 @@ GameObject:
   - component: {fileID: 1588100128}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37980,7 +38102,7 @@ GameObject:
   - component: {fileID: 1617506391}
   m_Layer: 5
   m_Name: Dialogo (3)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38559,6 +38681,126 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637578116}
+  m_CullTransparentMesh: 1
+--- !u!1 &1640418915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1640418916}
+  - component: {fileID: 1640418919}
+  - component: {fileID: 1640418918}
+  - component: {fileID: 1640418917}
+  m_Layer: 5
+  m_Name: ContrastebtnON (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1640418916
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640418915}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.3567584, y: 3.3567584, z: 3.3567584}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 992178228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 246, y: -443}
+  m_SizeDelta: {x: 105.101, y: 26.669}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1640418917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640418915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1640418918}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1640418918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640418915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.20188677, g: 1, b: 0.24570484, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2933404923194881010, guid: 6d744a3696f59384f9607fa0f420af77, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1640418919
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640418915}
   m_CullTransparentMesh: 1
 --- !u!1 &1641521278
 GameObject:
@@ -40333,7 +40575,7 @@ GameObject:
   - component: {fileID: 1737324602}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40591,7 +40833,7 @@ GameObject:
   - component: {fileID: 1738820999}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41096,7 +41338,7 @@ GameObject:
   - component: {fileID: 1761411729}
   m_Layer: 5
   m_Name: Dialogo
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41247,7 +41489,7 @@ GameObject:
   - component: {fileID: 1762524870}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42571,6 +42813,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 483113748}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RecolectaHueso_1
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1857064051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42701,6 +42955,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 483113748}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RecolectaHueso_1
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1858768379
@@ -43489,7 +43755,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 842175717}
+      - m_Target: {fileID: 1465624478}
         m_TargetAssemblyTypeName: AccesibilityManager, Assembly-CSharp
         m_MethodName: Disminuir
         m_Mode: 1
@@ -43685,7 +43951,7 @@ GameObject:
   - component: {fileID: 1897972051}
   m_Layer: 5
   m_Name: Dialogo (2)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43761,7 +44027,7 @@ GameObject:
   - component: {fileID: 1901734876}
   m_Layer: 5
   m_Name: Dialogo (6)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44654,7 +44920,7 @@ GameObject:
   - component: {fileID: 1949359129}
   m_Layer: 5
   m_Name: Dialogo
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46530,13 +46796,14 @@ GameObject:
   - component: {fileID: 2010450188}
   - component: {fileID: 2010450190}
   - component: {fileID: 2010450189}
+  - component: {fileID: 2010450191}
   m_Layer: 5
-  m_Name: Banner (5)
+  m_Name: ContrastebtnOFF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2010450188
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46594,6 +46861,110 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010450187}
   m_CullTransparentMesh: 1
+--- !u!114 &2010450191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010450187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2010450189}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1465624478}
+        m_TargetAssemblyTypeName: AccesibilityManager, Assembly-CSharp
+        m_MethodName: DesactivarAltoContraste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2010450187}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 261902214}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1640418915}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 496597514}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &2018727368
 GameObject:
   m_ObjectHideFlags: 0
@@ -46744,7 +47115,7 @@ GameObject:
   - component: {fileID: 2020619795}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47456,7 +47827,7 @@ GameObject:
   - component: {fileID: 2051246611}
   m_Layer: 5
   m_Name: Dialogo
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48189,7 +48560,7 @@ GameObject:
   - component: {fileID: 2101143756}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dialogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
