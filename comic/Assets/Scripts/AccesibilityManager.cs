@@ -6,117 +6,112 @@ using UnityEngine.UI;
 
 public class AccesibilityManager : MonoBehaviour
 {
-    // ─── Configuración ────────────────────────────────────────────────────
-    private const float MIN_SIZE = 36f;
-    private const float MAX_SIZE = 40f;
+    private const string KeyNivelTamano = "Accesibilidad_NivelTamano";
+    private const string KeyColorTexto = "Accesibilidad_ColorTexto";
 
-    // Tag que identifica los elementos del diálogo (debe existir en Tag Manager, escrita igual)
-    private const string DIALOG_TAG = "Dialogo";
+    [Header("Límites (puntos sobre el tamaño original)")]
+    [SerializeField] private float maxDisminucion = 4f;
+    [SerializeField] private float maxAumento = 8f;
 
-    // ─── Estado que se conserva al cambiar de escena ──────────────────────
-    // static = sobrevive a la carga de escenas (se reinicia solo al cerrar la aplicación)
-    private static float sizeOffset = 0f;
-    private static bool highContrastEnabled = false;
+    private readonly Dictionary<TMP_Text, float> tamanosOriginales = new Dictionary<TMP_Text, float>();
+    private readonly Dictionary<TMP_Text, Color> coloresOriginales = new Dictionary<TMP_Text, Color>();
 
-    // ─── Estado de ESTA escena ────────────────────────────────────────────
-    // Tamaño original de cada texto, antes de aplicar el ajuste
-    private readonly Dictionary<TMP_Text, float> baseSizes = new Dictionary<TMP_Text, float>();
-    // Color original de cada Image/Texto modificado por el alto contraste
-    private readonly Dictionary<Graphic, Color> originalColors = new Dictionary<Graphic, Color>();
+    private float nivelTamano;
+    private bool usaColorPersonalizado;
+    private Color colorPersonalizado;
 
     private void Awake()
     {
-        // Aplica lo que el usuario ya había configurado en escenas anteriores
-        if (sizeOffset != 0f) ApplySize();
-        if (highContrastEnabled) ApplyHighContrast();
-    }
-
-
-    // Imágenes con tag "dialogo"  negro | Textos con tag "dialogo"  blanco
-    public void ActivarAltoContraste()
-    {
-        highContrastEnabled = true;
-        ApplyHighContrast();
-    }
-
-    // Devuelve las imágenes y textos a sus colores originales
-    public void DesactivarAltoContraste()
-    {
-        highContrastEnabled = false;
-
-        foreach (KeyValuePair<Graphic, Color> par in originalColors)
+        foreach (TMP_Text texto in GetComponentsInChildren<TMP_Text>(true))
         {
+            tamanosOriginales[texto] = texto.fontSize;
+            coloresOriginales[texto] = texto.color;
+        }
+
+        CargarPreferencias();
+        AplicarTamano();
+        AplicarColor();
+    }
+
+    // ---------- TAMAÑO ----------
+    public void CambiarTamanoTexto(float delta)
+    {
+        nivelTamano = Mathf.Clamp(nivelTamano + delta, -maxDisminucion, maxAumento);
+        AplicarTamano();
+        GuardarPreferencias();
+    }
+
+    public void AumentarTamano() => CambiarTamanoTexto(1f);
+    public void DisminuirTamano() => CambiarTamanoTexto(-1f);
+
+    private void AplicarTamano()
+    {
+        foreach (var par in tamanosOriginales)
+        {
+            if (par.Key == null) continue;
+            par.Key.fontSize = Mathf.Max(1f, par.Value + nivelTamano);
+        }
+    }
+
+    // ---------- COLOR ----------
+    public void CambiarColorTexto(Color color)
+    {
+        usaColorPersonalizado = true;
+        colorPersonalizado = color;
+        AplicarColor();
+        GuardarPreferencias();
+    }
+
+    public void PonerNaranja() => CambiarColorTexto(new Color32(255, 128, 0, 255));
+    public void PonerAmarilloCalido() => CambiarColorTexto(new Color32(255, 210, 89, 255));
+
+    private void AplicarColor()
+    {
+        if (!usaColorPersonalizado) return;
+
+        foreach (TMP_Text texto in coloresOriginales.Keys)
+        {
+            if (texto != null) texto.color = colorPersonalizado;
+        }
+    }
+
+    // ---------- RESTAURAR ----------
+    public void RestaurarPredeterminados()
+    {
+        nivelTamano = 0f;
+        usaColorPersonalizado = false;
+
+        foreach (var par in tamanosOriginales)
+            if (par.Key != null) par.Key.fontSize = par.Value;
+
+        foreach (var par in coloresOriginales)
             if (par.Key != null) par.Key.color = par.Value;
-        }
-        originalColors.Clear();
+
+        PlayerPrefs.DeleteKey(KeyNivelTamano);
+        PlayerPrefs.DeleteKey(KeyColorTexto);
+        PlayerPrefs.Save();
     }
 
-    private void ApplyHighContrast()
+    // ---------- PERSISTENCIA ----------
+    private void GuardarPreferencias()
     {
-        foreach (Image imagen in GetComponentsInChildren<Image>(true))
-        {
-            if (imagen.CompareTag(DIALOG_TAG)) SetHighContrastColor(imagen, Color.black);
-        }
+        PlayerPrefs.SetFloat(KeyNivelTamano, nivelTamano);
 
-        foreach (TMP_Text texto in GetComponentsInChildren<TMP_Text>(true))
-        {
-            if (texto.CompareTag(DIALOG_TAG)) SetHighContrastColor(texto, Color.white);
-        }
+        if (usaColorPersonalizado)
+            PlayerPrefs.SetString(KeyColorTexto, "#" + ColorUtility.ToHtmlStringRGBA(colorPersonalizado));
+
+        PlayerPrefs.Save(); // fuerza la escritura a disco
     }
 
-    // Guarda el color original (solo la primera vez) y aplica el nuevo conservando la transparencia
-    private void SetHighContrastColor(Graphic elemento, Color nuevo)
+    private void CargarPreferencias()
     {
-        if (!originalColors.ContainsKey(elemento)) originalColors[elemento] = elemento.color;
+        nivelTamano = Mathf.Clamp(PlayerPrefs.GetFloat(KeyNivelTamano, 0f), -maxDisminucion, maxAumento);
 
-        float alfaOriginal = originalColors[elemento].a;
-        elemento.color = new Color(nuevo.r, nuevo.g, nuevo.b, alfaOriginal);
-    }
-
-    // Cambia el tamaño de todos los TMP hijos
-    public void Resize(float delta)
-    {
-        RegisterTexts();
-
-        float minBase = float.MaxValue;
-        float maxBase = float.MinValue;
-        foreach (KeyValuePair<TMP_Text, float> par in baseSizes)
+        if (PlayerPrefs.HasKey(KeyColorTexto) &&
+            ColorUtility.TryParseHtmlString(PlayerPrefs.GetString(KeyColorTexto), out Color guardado))
         {
-            if (par.Key == null) continue;
-            minBase = Mathf.Min(minBase, par.Value);
-            maxBase = Mathf.Max(maxBase, par.Value);
-        }
-        if (minBase > maxBase) return;   // no hay textos
-
-        // Se limita el ajuste al rango que realmente se puede alcanzar. Así, al llegar al
-        // tope, un clic en el sentido contrario se nota de inmediato (no se "acumula").
-        float lo = MIN_SIZE - maxBase;
-        float hi = MAX_SIZE - minBase;
-        sizeOffset = Mathf.Clamp(Mathf.Clamp(sizeOffset, lo, hi) + delta, lo, hi);
-
-        ApplySize();
-    }
-
-    public void Aumentar() => Resize(1f);
-    public void Disminuir() => Resize(-1f);
-
-    private void ApplySize()
-    {
-        RegisterTexts();
-
-        foreach (KeyValuePair<TMP_Text, float> par in baseSizes)
-        {
-            if (par.Key == null) continue;
-            par.Key.fontSize = Mathf.Clamp(par.Value + sizeOffset, MIN_SIZE, MAX_SIZE);
-        }
-    }
-
-    // Guarda el tamaño original de los textos que aún no están registrados
-    private void RegisterTexts()
-    {
-        foreach (TMP_Text texto in GetComponentsInChildren<TMP_Text>(true))
-        {
-            if (!baseSizes.ContainsKey(texto)) baseSizes[texto] = texto.fontSize;
+            usaColorPersonalizado = true;
+            colorPersonalizado = guardado;
         }
     }
 }
